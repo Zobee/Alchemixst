@@ -1,0 +1,390 @@
+:root{
+  --mainBlue: #2a2a72;
+  --lightBlue: #009eed;
+  --mainWhite: #f3f3f3;
+  --mainDark: #232528;
+  --mainYellow: #ffa400;
+}
+
+.App {
+  text-align: center;
+  background-image: linear-gradient(#666, #BBB);
+  
+}
+
+.img{
+  height: 15rem;
+  width: 20rem;
+}
+
+.title-text{
+  font-size: 5rem;
+  margin-top: 10%;
+  font-family: 'Amatic SC', cursive;
+  color: #CCC
+}
+
+.text-div{
+  margin: 0rem 12rem;
+}
+
+.home-text{
+  text-align: center;
+  font-size: 1.5rem;
+  color: white;
+  font-family: 'Paytone One', sans-serif;
+  font-weight: lighter;
+}
+
+.page{
+  height: 100vh;
+  background-image: linear-gradient(#555, #BBB);
+}
+
+.sticky{
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.card{
+  position: relative;
+  border-color: transparent;
+  background: transparent;
+  transition:all 0.5s linear;
+}
+
+.card:hover{
+  border:0.04rem solid black;
+  box-shadow:2px 2px 5px 0px black;
+}
+
+.card-footer{
+  margin-top: 0.5rem;
+  background: transparent;
+  border-top: transparent;
+  transition:all 0.25s linear;
+}
+
+
+.img-container{
+  position: relative;
+  overflow: hidden;
+}
+
+.card-img-top{
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition:all 0.25s linear;
+}
+
+.img-container:hover .card-img-top{
+  transform: scale(1.1);  
+}
+
+.cart-btn{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 0.1rem 0.3rem;
+  background-color: var(--lightBlue);    
+  border: none;   
+  color: var(--mainWhite);
+  font-size: 1.2rem;
+  border-radius: 0.25rem 0 0 0;
+  transform:translate(100%, 100%);
+  transition: all 0.25s linear;
+}
+.img-container:hover .cart-btn{
+  transform:translate(0,0);
+}
+.cart-btn:hover{
+  color: var(--mainBlue);
+  cursor: pointer;
+}
+
+.ig{
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.icon{
+  color: black;
+  border-radius: 50%;
+  margin: 0rem 0.1rem;
+}
+
+.textbox{
+  border: 0;
+  outline: 0;
+  border-bottom: 2px solid black;
+  background: none;
+  color: black;
+  font-weight: bold;
+}
+
+.icon:hover{
+  color: gray;
+  cursor: pointer;
+  transition: all 0.25s linear;
+}
+
+.padWrapper {
+  margin: 5% 10%;
+  height: 90vh;
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(150px, 1fr));
+  grid-template-rows: 0.5fr 1fr 1fr 1fr 0.5fr 60px; 
+  grid-template-areas: 
+      "h h h h h"
+      "p1 p2 p3 x x"
+      "p4 p5 p6 x x"
+      "p7 p8 p9 x x"
+      'v v v x x';
+  border: solid 3px black;
+  background-color: #444;
+  font-family: 'Kulim Park', sans-serif;
+}
+
+.padHeader{ 
+  grid-area: h;
+  border-bottom: solid 1px black;
+  background-image: linear-gradient(rgb(200, 150, 90), rgb(230, 182, 119));
+  font-size: 3rem;
+}
+
+.padControls{
+  grid-area: x;
+  border: solid 1px black;
+  height: 100%;
+  margin-right: 0.3rem;
+  box-shadow:2px 2px 2px 0px black;
+  color: whitesmoke;
+}
+
+.ctrlDiv{
+  margin: 3% 1%;
+  max-width: 100%;
+}
+
+.switch{
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 30px;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #999;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 24px;
+  width: 24px;
+  left: 2px;
+  bottom: 3px;
+  background-color: white;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background: linear-gradient(#4B4, #491);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px green;
+}
+
+.deck{
+  border-radius: 20%;
+  transform: scaleY(.5);
+  margin: 5 60%;
+  padding: 0.5rem;
+  transition: all 0.2s linear;
+}
+
+.deck:focus{
+  box-shadow: 0 0 1px black;
+}
+.deck0{
+  background-color: green;
+}
+.deck1{
+  background-color: orchid;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(18px);
+  -ms-transform: translateX(18px);
+  transform: translateX(18px);
+}
+
+.visualizer{
+  grid-area: v;
+  color: white;
+  transition: all 0.1s linear;
+  height: 150%;
+  margin-top: 1%;
+  transform: scale(0.95);
+  border: solid 1px black;
+}
+
+.activeVisual{
+  transform: scaleX(1);
+}
+
+.pad{
+  border: 2px solid black;
+  cursor: pointer;
+  box-shadow:0 5px black;
+  transition: 0.1s linear;
+  margin-top: 1px;
+}
+
+.pad > p {
+  margin-top: 25%;
+}
+
+.pad1 {
+  grid-area: p1;
+  background-color: red;
+  margin-left: 0.3rem;
+}
+
+.pad1Down {
+  box-shadow:2px 0px 0px 0px black;
+  transform: translateY(2px);
+  background: #F33;
+  
+}
+
+.pad2 {
+  grid-area: p2;
+  background-color: blue;
+}
+
+.pad2Down {
+  box-shadow:2px 0px 0px 0px black;
+  transform: translateY(2px);
+  background-color: #22F;
+}
+
+.pad3 {
+  grid-area: p3;
+  background-color: green;
+}
+
+.pad3Down {
+  box-shadow:2px 0px 0px 0px black;
+  transform: translateY(2px);
+  background-color: #090;
+}
+
+.pad4 {
+  grid-area: p4;
+  background-color: orange;
+  margin-left: 0.3rem;
+}
+
+.pad4Down {
+  box-shadow:2px 0px 0px 0px black;
+  transform: translateY(2px);
+  background-color: #F92;
+}
+
+.pad5 {
+  grid-area: p5;
+  background-color: cyan;
+}
+
+.pad5Down {
+  box-shadow:2px 0px 0px 0px black;
+  transform: translateY(2px);
+  background-color: #0DD;
+}
+
+.pad6 {
+  grid-area: p6;
+  background-color: linen;
+  transition: 0.1s linear;
+}
+
+.pad6Down {
+  box-shadow:2px 0px 0px 0px black;
+  transform: translateY(2px);
+  background-color: #FED ;
+}
+
+.pad7 {
+  grid-area: p7;
+  background-color: yellowgreen;
+  margin-left: 0.3rem;
+}
+
+.pad7Down {
+  box-shadow:2px 0px 0px 0px black;
+  transform: translateY(3px);
+  background-color:rgb(167, 218, 65);
+}
+
+.pad8 {
+  grid-area: p8;
+  background-color: thistle;
+}
+
+.pad8Down {
+  box-shadow:2px 0px 0px 0px black;
+  transform: translateY(3px);
+  background-color: #B9B  
+}
+
+.pad9 {
+  grid-area: p9;
+  background-color: cornflowerblue;
+}
+
+.pad9Down {
+  box-shadow:2px 0px 0px 0px black;
+  transform: translateY(3px);
+  background-color: rgb(116, 158, 235);
+}
+
+.powerLight {
+  border-radius: 75%;
+  margin: 0 50%;
+  padding: 0.5rem;
+  box-shadow: 0px 0px 2px 2px black;  
+}
+
+.powerOn {
+  background: linear-gradient(#7B4, #491) ;
+}
+
+.powerOff {
+  background: linear-gradient(crimson, red);
+}
+
+.deckDisplay {
+  border: solid 1px #000000;
+  margin: 0 25%;
+  padding: 0.5rem 0;
+  border-radius: 15%;
+  color: white;
+  font-size: 120%;
+  background-color: dimgray;
+}
+
