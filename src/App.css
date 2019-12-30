@@ -26,6 +26,7 @@
 
 .text-div{
   margin: 0rem 12rem;
+  min-width: 240px;
 }
 
 .home-text{

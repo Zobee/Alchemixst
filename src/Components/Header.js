@@ -1,27 +1,24 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import '../App.css'
+import {Navbar, Nav} from 'react-bootstrap' 
 
-function Header() {
-  return (
-<nav className="navbar navbar-expand-lg navbar-dark bg-dark sticky">
-  <Link to='/' className="navbar-brand" >Alchemixst</Link>
-  <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span className="navbar-toggler-icon"></span>
-  </button>
 
-  <div className="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul className="navbar-nav mr-auto">
-      <li className="nav-item">
-        <Link to='/' className="nav-link" >Home</Link>
-      </li>
-      <li className="nav-item">
-        <Link to='/drumpad' className="nav-link">Make Some Beats!</Link>
-      </li>
-    </ul>
-  </div>
-</nav>
-    )
+const Header = () => {
+  return(
+<Navbar bg="dark" expand="lg">
+  <Navbar.Brand><Link to='/' className='text-light' >Alchemixst</Link></Navbar.Brand>
+  <Navbar.Toggle aria-controls="basic-navbar-nav" />
+  <Navbar.Collapse id="basic-navbar-nav">
+    <Nav className="mr-auto">
+      <Link to='/' className="nav-link text-light" >Home</Link>
+      <Link to='/drumpad' className="nav-link text-light">Make Some Beats!</Link>
+    </Nav>
+  </Navbar.Collapse>
+</Navbar>
+
+  )
+  
 }
 
 export default Header

@@ -75,7 +75,7 @@ const Drumpad = () => {
     
 
     return (
-        <div className='padWrapper'>
+        <div className='padWrapper container-fluid'>
             <PadHeader text='Alchemic Beats' />
             {pad}
             <Controls 

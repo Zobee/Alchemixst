@@ -38,8 +38,10 @@ function Home() {
     return (
         <div>
             <h1 className='my-2 font-weight-bold title-text'>Alchemixst</h1>
-            <img className='my-1 img img-responsive' src="AlchemixstLogo.png" alt='img' />
-            <div className='text-div'>
+            <div className='img-container'>
+                <img className='my-1 img-fluid img' src="AlchemixstLogo.png" alt='img' />
+            </div>
+            <div className='container-fluid'>
             <h5 className='m-3 home-text'>What's up! Thanks for taking the time to give this page a look. I'm a Toronto-based musician (wannabe) with a love of rock, hiphop and lo-fi. Check out some of my home-brewed, locally sourced lo-fi tracks. </h5>
             <h5 className='m-3 home-text'>Alchemixst is a Toronto local mother's basement-based lo-fi hiphop artist. Drawing influence from rock, vaporwave and hiphop. Alchemixst doesn't expect to ever be a household name, but if at least one person picks up what he's putting down, he'll be happy.</h5>
             <h5 className='m-3 home-text'>As of 2019, with over 30 followers on instagram and a whopping zero plays on spotify, Alchemixst is proving to be a real tour de force in the lo-fi scene. Critics have compared Alchemixst to... nobody. Cause Alchemixst's avante-garde stylist shouldn't be limited by simple comparisons (not because there aren't any critics listening, or anything). Today, Alchemixst is moving towards making a couple bucks for coffee. If you're strong in the wallet, but weak in the head, consider donating by clicking the coffee cup below, he'd really appreciate it.</h5>
